@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="product-imgs">
+                    <img src="images/The Book Of Roads And Kingdoms.png" alt="book image">
+                </div>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <p><ins>write a rewiew</ins></p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="product-content">
+                    <h2 class="product-title">The Book Of Roads And Kingdoms</h2>
+                    <div class="row">
+                        <div class="col-sm-3">By Richard Fidler</div>
+                        <div class="col-sm-3">Hardcover</div>
+                        <div class="col-sm-3">19 October 2022</div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="product-price">
+                                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+                            </div>
+                            <div class="purchase-info">
+                                <input type="number" min="0" value="1">
+                                <button type="button" class="btn">
+                                    ADD TO CART <i class="fas fa-shopping-cart"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <button class="tablinks" onclick="openLocation(event, 'Online')">Online</button>
+                            <button class="tablinks" onclick="openLocation(event, 'InStore')">In Store</button>
+                        </div>
+
+                        <div id="Online" class="tabcontent">
+                            <h3>Online</h3>
+                            <p class="Online">IN STOCK - SHIP NEXT DAY</p>
+                        </div>
+
+                        <div id="InStore" class="tabcontent">
+                            <h3>In-Store</h3>
+                            <p>Check Availability In-Store</p>
+                        </div>
+
+                        <script>
+                            function openLocation(evt, locationName) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tablinks.length; i++) {
+                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                }
+                                document.getElementById(locationName).style.display = "block";
+                                evt.currentTarget.className += " active";
+                            }
+                        </script>
+
+                        <div class="product-detail">
+
+                            <h2>About this item: </h2>
+                            <p>The Book of Roads & Kingdomsis the story of the medieval wanderers who travelled out to
+                                the
+                                edges
+                                of the known world during Islam's fabled Golden Age; an era when the caliphs of Baghdad
+                                presided
+                                over a dominion greater than the Roman Empire at its peak, stretching from North Africa
+                                to
+                                India. Imperial Baghdad, founded as the 'City of Peace', quickly became the biggest and
+                                richest
+                                metropolis in the world. Standing atop one of the city's four gates, its founder
+                                proclaimed:Here
+                                is the Tigris River, and nothing stands between it and China.</p>
+
+                            <ul>
+                                <li>Color: <span>Black</span></li>
+                                <li>Available: <span>in stock</span></li>
+                                <li>Category: <span>History</span></li>
+                                <li>Shipping Area: <span>All over the world</span></li>
+                                <li>Shipping Fee: <span>Free</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="tab">
+            <button class="tablinks" onclick="openMenu(event, '1')">Product Details</button>
+            <button class="tablinks" onclick="openMenu(event, '2')">Rating & Review</button>
+            <button class="tablinks" onclick="openMenu(event, '3')">Shipping and Return</button>
+        </div>
+
+        <div id="1" class="tabcontent">
+            <h3>PRODUCT DETAILS</h3>
+            <div>Title: The Book Of Roads And Kingdoms</div>
+            <div>Author: Richard Fidler</div>
+            <div>Publisher: HarperCollins Publishers</div>
+            <div>ISBN: 9780733342592</div>
+        </div>
+
+        <div id="2" class="tabcontent">
+            <h3>RATINGS & REVIEW</h3>
+            <div>GOODREADS REVIEWS FOR THE BOOK OF ROADS AND KINGDOMS</div>
+            <div>Write a review</div>
+        </div>
+
+        <div id="3" class="tabcontent">
+            <h3>SHIPPING AND RETURNS</h3>
+
+            <li>Delivery options: Shipping to an Australian address</li>
+            <li>When will my book be dispatched from your warehouse?</li>
+            <li>When will my order arrive?</li>
+            <li>Tracking delivery</li>
+            <li>International orders</li>
+            <li>Delivery restrictions</li>
+            <li>Problems with your delivery</li>
+        </div>
+
+        <script>
+            function openMenu(evt, menuName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+
+    </div>
+    <div class="container">
+        <h3>YOU MAY ALSO LIKE</h3>
+        <div class="collection">
+            <div>
+                <img src="images/Exiles.png" alt="book image">
+                <P>Exiles</P>
+                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+            </div>
+            <div>
+                <img src="images/Mythos.png" alt="book image">
+                <p>Mythos</p>
+                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+            </div>
+            <div>
+                <img src="images/It start with us.png" alt="book image">
+                <P>It start with us</P>
+                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
